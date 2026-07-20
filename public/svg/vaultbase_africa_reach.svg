@@ -1,0 +1,86 @@
+<svg viewBox="0 0 800 800" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
+  
+<style>
+  .outline {
+    fill: none;
+    stroke: #ffed00;
+    stroke-width: 2;
+    stroke-dasharray: 3203.6;
+    animation: draw-outline 7s ease-in-out infinite alternate;
+  }
+  .ray {
+    fill: none;
+    stroke: #ffed00;
+    stroke-width: 1.4;
+    stroke-linecap: round;
+    opacity: 0.85;
+  }
+  .ray-0 { stroke-dasharray: 220.4; animation: draw-ray-0 7s ease-in-out infinite alternate; }.ray-1 { stroke-dasharray: 136.3; animation: draw-ray-1 7s ease-in-out infinite alternate; }.ray-2 { stroke-dasharray: 462.0; animation: draw-ray-2 7s ease-in-out infinite alternate; }.ray-3 { stroke-dasharray: 415.0; animation: draw-ray-3 7s ease-in-out infinite alternate; }.ray-4 { stroke-dasharray: 434.4; animation: draw-ray-4 7s ease-in-out infinite alternate; }.ray-5 { stroke-dasharray: 320.5; animation: draw-ray-5 7s ease-in-out infinite alternate; }.ray-6 { stroke-dasharray: 256.9; animation: draw-ray-6 7s ease-in-out infinite alternate; }.ray-7 { stroke-dasharray: 319.4; animation: draw-ray-7 7s ease-in-out infinite alternate; }
+  .nigeria-dot {
+    fill: #ffed00;
+    animation: nigeria-pulse 2.4s ease-in-out infinite;
+  }
+  
+@keyframes draw-outline {
+  0%   { stroke-dashoffset: 3203.6; }
+  38%  { stroke-dashoffset: 0; }
+  100% { stroke-dashoffset: 0; }
+}
+@keyframes draw-ray-0 {
+  0% { stroke-dashoffset: 220.4; }
+  42.0% { stroke-dashoffset: 220.4; }
+  62.0% { stroke-dashoffset: 0; }
+  100% { stroke-dashoffset: 0; }
+}
+@keyframes draw-ray-1 {
+  0% { stroke-dashoffset: 136.3; }
+  47.43% { stroke-dashoffset: 136.3; }
+  67.43% { stroke-dashoffset: 0; }
+  100% { stroke-dashoffset: 0; }
+}
+@keyframes draw-ray-2 {
+  0% { stroke-dashoffset: 462.0; }
+  52.86% { stroke-dashoffset: 462.0; }
+  72.86% { stroke-dashoffset: 0; }
+  100% { stroke-dashoffset: 0; }
+}
+@keyframes draw-ray-3 {
+  0% { stroke-dashoffset: 415.0; }
+  58.29% { stroke-dashoffset: 415.0; }
+  78.29% { stroke-dashoffset: 0; }
+  100% { stroke-dashoffset: 0; }
+}
+@keyframes draw-ray-4 {
+  0% { stroke-dashoffset: 434.4; }
+  63.71% { stroke-dashoffset: 434.4; }
+  83.71% { stroke-dashoffset: 0; }
+  100% { stroke-dashoffset: 0; }
+}
+@keyframes draw-ray-5 {
+  0% { stroke-dashoffset: 320.5; }
+  69.14% { stroke-dashoffset: 320.5; }
+  89.14% { stroke-dashoffset: 0; }
+  100% { stroke-dashoffset: 0; }
+}
+@keyframes draw-ray-6 {
+  0% { stroke-dashoffset: 256.9; }
+  74.57% { stroke-dashoffset: 256.9; }
+  94.57% { stroke-dashoffset: 0; }
+  100% { stroke-dashoffset: 0; }
+}
+@keyframes draw-ray-7 {
+  0% { stroke-dashoffset: 319.4; }
+  80.0% { stroke-dashoffset: 319.4; }
+  100% { stroke-dashoffset: 0; }
+  100% { stroke-dashoffset: 0; }
+}
+@keyframes nigeria-pulse {
+  0%, 100% { r: 6; opacity: 0.9; }
+  50%      { r: 9; opacity: 0.5; }
+}
+</style>
+
+  <path class="outline" d="M42.767,262.425L52.169,274.498L53.21,289.589L71.493,303.212L91.04,335.424L142.36,371.167L176.697,362.752L204.419,367.486L243.959,352.639L269.34,351.321L285.58,372.131L312.448,366.855L321.775,377.595L325.789,384.438L315.495,427.644L347.677,468.244L365.96,527.587L365.44,541.363L346.265,581.313L346.45,605.861L371.869,650.297L381.717,706.855L412.784,761.032L413.006,788.108L427.165,800L457.712,788.066L490.822,789.076L515.981,774.58L557.118,726.273L564.476,696.748L560.946,691.151L590.712,672.867L591.79,650.071L583.763,624.572L610.854,600.63L631.924,591.268L645.6,569.524L642.515,527.96L629.212,504.088L631.813,486.952L625.198,483.153L629.36,464.492L640.323,442.747L705.355,386.678L726.314,360.98L746.53,320.814L752.513,294.036L729.956,297.603L729.845,318.158L717.99,333.289L675.552,320.956L663.995,306.413L666.262,302.696L655.708,301.379L661.876,285.654L669.383,283.989L630.029,249.653L621.185,227.258L611.597,220.559L605.242,183.275L591.418,170.959L593.128,161.68L558.308,94.138L577.26,116.967L585.175,97.213L578.412,76.66L554.591,80.107L544.446,72.587L523.153,80.881L447.084,56.895L432.516,64.294L431.699,79.476L421.702,88.105L386.882,74.779L382.051,63.963L331.437,45.249L337.606,21.221L334.113,12.145L339.278,5.829L329.765,8.098L330.099,1.559L322.853,0L281.14,3.946L239.834,9.623L202.301,27.933L163.468,20.446L153.323,41.205L128.685,60.3L123.37,77.171L125.972,92.083L104.047,113.168L89.07,119.098L59.713,163.972L48.565,194.373L56.666,204.374L56.74,236.257L52.281,252.885ZM671.167,649.694L679.305,682.702L693.427,689.697L710.855,682.162L738.503,592.929L737.426,580.405L739.395,577.232L742.888,583.529L745.75,575.221L732.52,541.381L717.135,568.477L702.754,581.168L683.504,585.839L678.488,598.725L682.761,627.749ZM748.5,144.005L749.169,152.303L755.152,153.745L757.233,140.342L754.111,136.747Z" />
+  <path class="ray ray-0" d="M307.22,317.15 Q169.19,323.77 87.13,328.98" /><path class="ray ray-1" d="M307.22,317.15 Q295.92,397.80 331.55,447.90" /><path class="ray ray-2" d="M307.22,317.15 Q352.87,568.98 412.83,766.68" /><path class="ray ray-3" d="M307.22,317.15 Q462.68,488.89 604.40,606.34" /><path class="ray ray-4" d="M307.22,317.15 Q552.26,325.82 741.41,330.99" /><path class="ray ray-5" d="M307.22,317.15 Q460.29,218.42 591.96,171.44" /><path class="ray ray-6" d="M307.22,317.15 Q349.94,176.69 417.40,86.46" /><path class="ray ray-7" d="M307.22,317.15 Q209.08,159.90 155.75,36.24" />
+  <circle class="nigeria-dot" cx="307.2220261516653" cy="317.15212345491545" r="6" />
+</svg>
