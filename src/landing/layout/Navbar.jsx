@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import CTA from "../shared/CTA";
 import header_img from "/assets/header-logo.png";
+import mobile_img from "/img/vaultbase-primary.svg";
 import { NavLink } from "react-router-dom";
 
 function Navbar() {
@@ -81,9 +82,7 @@ function Navbar() {
         <div className="flex flex-col h-full">
           {/* Top */}
           <div className="flex items-center justify-between px-6 py-6">
-            <h1 className="font-bold text-white text-3xl">
-              Vault<span className="text-[#ffed00]">Base</span>
-            </h1>
+            <img src={mobile_img} alt="VaultBase" className="w-48" />
             <button
               onClick={() => setMenuOpen(false)}
               className="text-[#ffed00] text-3xl tracking-widest uppercase hover:opacity-70 transition"
