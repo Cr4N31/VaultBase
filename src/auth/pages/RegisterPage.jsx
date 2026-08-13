@@ -24,14 +24,14 @@ export default function RegisterPage() {
   };
 
   return (
-    <div className="min-h-screen w-full flex bg-black">
+    <div className="min-h-screen w-full flex bg-black overflow-x-hidden">
       {/* Form panel */}
-      <div className="w-full lg:w-[45%] flex flex-col justify-center px-8 sm:px-16 py-12">
+      <div className="w-full lg:w-[45%] flex flex-col justify-start px-8 sm:px-16 py-12 min-w-0 max-h-screen overflow-y-auto register-scrollbar">
         <motion.div
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, ease: "easeOut" }}
-          className="max-w-sm w-full mx-auto"
+          className="max-w-sm w-full mx-auto min-w-0"
         >
           <div className="flex absolute top-5 left-5 items-center gap-2 mb-6">
             <Link to="/">
@@ -48,17 +48,17 @@ export default function RegisterPage() {
 
           <div className="flex flex-col gap-3">
             <div>
-              <button className="bg-white/10 hover:bg-white/20 transition-colors duration-250 w-full flex gap-3 items-center justify-center py-4 px-8 border border-white/10 rounded-xl text-white">
+              <button className="bg-white/10 font-['Space_Grotesk'] hover:bg-white/20 transition-colors duration-250 w-full flex gap-3 items-center justify-center py-4 px-8 border border-white/10 rounded-xl text-white">
                 <FaGoogle className="inline-block" />
                 <p className="text-sm">Continue with Google</p>
               </button>
             </div>
             <div className="flex flex-col sm:flex-row gap-2">
-              <button className="bg-white/10 hover:bg-white/20 transition-colors duration-250 w-full flex gap-3 items-center justify-center py-3 px-8 border border-white/10 rounded-xl text-white whitespace-nowrap">
+              <button className="bg-white/10 font-['Space_Grotesk'] hover:bg-white/20 transition-colors duration-250 w-full flex gap-3 items-center justify-center py-3 px-8 border border-white/10 rounded-xl text-white whitespace-nowrap">
                 <FaFacebookF className="inline-block" />
                 <p className="text-sm">Facebook</p>
               </button>
-              <button className="w-full bg-white/10 hover:bg-white/20 transition-colors duration-250 flex gap-3 items-center justify-center py-3 px-8 border border-white/10 rounded-xl text-white whitespace-nowrap">
+              <button className="w-full bg-white/10 font-['Space_Grotesk'] hover:bg-white/20 transition-colors duration-250 flex gap-3 items-center justify-center py-3 px-8 border border-white/10 rounded-xl text-white whitespace-nowrap">
                 <FaMicrosoft className="inline-block" />
                 <p className="text-sm">Microsoft</p>
               </button>
@@ -73,7 +73,7 @@ export default function RegisterPage() {
             <div className="border-t w-50 border-white/20 my-6"></div>
           </div>
 
-          <form onSubmit={handleSubmit} className="space-y-6">
+          <form onSubmit={handleSubmit} className="space-y-6 min-w-0">
             <div>
               <label
                 htmlFor="fullName"

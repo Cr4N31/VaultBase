@@ -10,7 +10,7 @@ import {
 
 const MAP_DRAW_DURATION = 1.4; // seconds, how long the map/tree draws itself in
 const MAP_START_DELAY = 0.35; // seconds after phase enters view before drawing starts
-const PARAGRAPH_DELAY = MAP_START_DELAY + MAP_DRAW_DURATION + 0.25;
+const PARAGRAPH_DELAY = MAP_START_DELAY + MAP_DRAW_DURATION + 0.15;
 
 /** Fires once when the element enters the viewport, then stops observing. */
 function useInViewOnce(threshold = 0.15) {
@@ -385,7 +385,7 @@ function PhaseBlock({ label, title, MapComponent, children }) {
         className="text-white/60 text-sm md:text-base leading-relaxed"
         initial={{ opacity: 0, y: 16 }}
         animate={inView ? { opacity: 1, y: 0 } : {}}
-        transition={{ duration: 0.6, ease: "easeOut", delay: PARAGRAPH_DELAY }}
+        transition={{ duration: 0.5, ease: "easeOut", delay: PARAGRAPH_DELAY }}
       >
         {children}
       </motion.p>
@@ -417,7 +417,7 @@ function Phases() {
       </motion.h1>
 
       {/* scroll-linked spine connecting all three phases */}
-      <div className="absolute mt-8 left-1/2 top-48 bottom-24 w-px -translate-x-1/2">
+      <div className="absolute mt-18 left-1/2 top-48 bottom-24 w-px -translate-x-1/2">
         <motion.div
           className="w-full bg-[#ffed00] shadow-[0_0_10px_#ffed00]"
           style={{ height: spineHeight }}
@@ -427,7 +427,7 @@ function Phases() {
       <div className="relative mt-[600px]">
         <div className="bg-black">
           <PhaseBlock
-            label="Phase 1 — Years 1–2"
+            label="Phase 1 — Years 1-2"
             title="Nigeria"
             MapComponent={NigeriaMap}
           >
@@ -441,7 +441,7 @@ function Phases() {
 
         <div className="bg-black mt-[500px]">
           <PhaseBlock
-            label="Phase 2 — Years 3–5"
+            label="Phase 2 — Years 3-5"
             title="West Africa"
             MapComponent={WestAfricaMap}
           >

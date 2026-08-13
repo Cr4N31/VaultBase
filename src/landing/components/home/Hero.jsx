@@ -1,8 +1,9 @@
 import LogoAnimated from "../animation/LogoAnimated";
+import VaultbasePrimary from "/img/vaultbase-primary.svg";
 import AfricanReach from "/svg/vaultbase_africa_reach.svg";
 function Hero() {
   return (
-    <section className="py-22 mt-20 flex flex-col justify-center items-center text-center px-6 bg-black">
+    <section className="py-22 flex flex-col justify-center items-center text-center px-6 bg-black">
       <img
         src={AfricanReach}
         alt=""
@@ -15,16 +16,13 @@ function Hero() {
 
       <div className="max-w-2xl">
         <div>
-          <div className="flex justify-center">
-            <LogoAnimated />
-          </div>
-
           <p
-            className="text-white text-sm md:text-lg font-medium mb-3"
+            className="text-white/80 text-3xl font-bold mb-6 mt-2"
             data-aos="fade-up"
             data-aos-once="true"
           >
-            Your data is encrypted, compliant, all in one place.
+            Your data is encrypted, compliant,
+            <br /> all in one place.
           </p>
 
           <p
@@ -35,26 +33,6 @@ function Hero() {
             Upload the data you already have. VaultBase secures every record
             with field-level encryption, fully aligned with NDPA 2023.
           </p>
-        </div>
-
-        <div
-          className="flex flex-col sm:flex-row gap-4 justify-center"
-          data-aos="fade-up"
-          data-aos-once="true"
-        >
-          <a
-            href="#"
-            className="bg-[#ffed00] text-black text-sm font-semibold px-8 py-3 rounded-full hover:bg-[#ffed00]/90 transition"
-          >
-            Register Your Organization
-          </a>
-
-          <a
-            href="#"
-            className="border text-sm border-[#ffed00]/40 text-[#ffed00] font-semibold px-8 py-3 rounded-full hover:border-[#ffed00] transition"
-          >
-            See How It Works
-          </a>
         </div>
       </div>
     </section>

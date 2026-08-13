@@ -26,7 +26,7 @@ function Navbar() {
 
   const desktopLink = ({ isActive }) =>
     `relative pb-1 font-medium transition-colors text-sm ${
-      isActive ? "text-[#ffed00]" : "text-[#ffed00]/60 hover:text-[#ffed00]"
+      isActive ? "text-[#ffed00]" : "text-white/80 hover:text-[#ffed00]"
     } after:absolute after:left-0 after:bottom-0 after:h-[1.5px] after:bg-[#ffed00] after:transition-all after:duration-300 ${
       isActive ? "after:w-full" : "after:w-0 hover:after:w-full"
     }`;
@@ -34,14 +34,14 @@ function Navbar() {
   return (
     <header>
       <nav
-        className={`fixed top-0 right-0 left-0 z-50 flex py-8 items-center justify-between px-8 transition-colors duration-300 ${
+        className={`flex top-0 right-0 left-0 z-50 flex py-8 items-center justify-between px-8 transition-colors duration-300 ${
           scrolled ? "bg-black" : "bg-transparent"
         }`}
       >
         <div>
           <img src={header_img} alt="header_img" className="w-15" />
         </div>
-        <div className="hidden md:flex items-center gap-20">
+        <div className="hidden md:flex items-center gap-10">
           <ul className="flex gap-10 text-[#ffed00]">
             {navLinks.map((n) => (
               <li key={n.name}>

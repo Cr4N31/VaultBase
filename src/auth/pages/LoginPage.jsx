@@ -42,17 +42,17 @@ export default function LoginPage() {
 
           <div className="flex flex-col gap-3">
             <div>
-              <button className="bg-white/10 hover:bg-white/20 transition-colors duration-250 w-full flex gap-3 items-center justify-center py-4 px-8 border border-white/10 rounded-xl text-white">
+              <button className="bg-white/10 font-['Space_Grotesk'] hover:bg-white/20 transition-colors duration-250 w-full flex gap-3 items-center justify-center py-4 px-8 border border-white/10 rounded-xl text-white">
                 <FaGoogle className="inline-block" />
                 <p className="text-sm">Continue with Google</p>
               </button>
             </div>
             <div className="flex flex-col sm:flex-row gap-2">
-              <button className="bg-white/10 hover:bg-white/20 transition-colors duration-250 w-full flex gap-3 items-center justify-center py-3 px-8 border border-white/10 rounded-xl text-white whitespace-nowrap">
+              <button className="bg-white/10 font-['Space_Grotesk'] hover:bg-white/20 transition-colors duration-250 w-full flex gap-3 items-center justify-center py-3 px-8 border border-white/10 rounded-xl text-white whitespace-nowrap">
                 <FaFacebookF className="inline-block" />
                 <p className="text-sm">Facebook</p>
               </button>
-              <button className="w-full bg-white/10 hover:bg-white/20 transition-colors duration-250 flex gap-3 items-center justify-center py-3 px-8 border border-white/10 rounded-xl text-white whitespace-nowrap">
+              <button className="w-full bg-white/10 font-['Space_Grotesk'] hover:bg-white/20 transition-colors duration-250 flex gap-3 items-center justify-center py-3 px-8 border border-white/10 rounded-xl text-white whitespace-nowrap">
                 <FaMicrosoft className="inline-block" />
                 <p className="text-sm">Microsoft</p>
               </button>
