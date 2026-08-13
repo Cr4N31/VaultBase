@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import CTA from "../shared/CTA";
 import header_img from "/assets/header-logo.png";
-import mobile_img from "/img/vaultbase-primary.svg";
+import mobile_img from "/img/vaultbase-primary-transparent.svg";
 import { NavLink } from "react-router-dom";
 
 function Navbar() {
@@ -144,9 +144,12 @@ function Navbar() {
                 </a>
               </div>
 
-              <p className="mt-8 text-[10px] tracking-[0.35em] text-[#ffed00]/50 uppercase">
-                © {new Date().getFullYear()} CRAN3
-              </p>
+              <div className="flex justify-between items-center mt-6">
+                <p className="mt-8 text-[10px] tracking-[0.35em] text-[#ffed00]/50 uppercase">
+                  © {new Date().getFullYear()} CRAN3
+                </p>
+                <CTA />
+              </div>
             </div>
           </div>
         </div>

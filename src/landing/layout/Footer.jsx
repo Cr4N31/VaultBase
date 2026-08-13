@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-import footer_img from "/img/vaultbase-monochrome-gold.svg";
+import footer_img from "/img/vaultbase-primary-transparent.svg";
 
 function Footer() {
   const navLinks = [

@@ -1,0 +1,9 @@
+<svg width="1000" height="300" viewBox="0 0 1000 300" xmlns="http://www.w3.org/2000/svg">
+  <text x="60" y="200"
+        font-family="'Space Grotesk', 'Arial Narrow', sans-serif"
+        font-weight="700"
+        font-size="140"
+        letter-spacing="-4"
+        fill="#FFFFFF">vaultbase</text>
+  <rect x="812" y="164" width="30" height="30" fill="#ffed00"/>
+</svg>
