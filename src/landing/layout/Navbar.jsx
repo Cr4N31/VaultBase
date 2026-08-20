@@ -1,36 +1,69 @@
 import { useEffect, useState } from "react";
 import CTA from "../shared/CTA";
-import header_img from "/assets/header-logo.png";
+import header_img from "/img/vaultbase-primary-transparent.svg";
 import mobile_img from "/img/vaultbase-primary-transparent.svg";
-import { NavLink } from "react-router-dom";
+
+const navLinks = [
+  { name: "Home", href: "#home" },
+  { name: "Features", href: "#features" },
+  { name: "How It Works", href: "#how-it-works" },
+  { name: "Pricing", href: "#pricing" },
+  { name: "Contact", href: "#contact" },
+];
 
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [activeSection, setActiveSection] = useState("home");
 
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 20);
     };
-    handleScroll(); // set correct state on mount (e.g. if page loads already scrolled)
+    handleScroll();
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const navLinks = [
-    { name: "Home", href: "/" },
-    { name: "Features", href: "/features" },
-    { name: "How It Works", href: "/how-it-works" },
-    { name: "Pricing", href: "/pricing" },
-    { name: "Contact", href: "/contact" },
-  ];
+  useEffect(() => {
+    const sectionIds = navLinks.map((n) => n.href.replace("#", ""));
+    const sections = sectionIds
+      .map((id) => document.getElementById(id))
+      .filter(Boolean);
 
-  const desktopLink = ({ isActive }) =>
-    `relative pb-1 font-medium transition-colors text-sm ${
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActiveSection(entry.target.id);
+          }
+        });
+      },
+      {
+        rootMargin: "-40% 0px -50% 0px",
+        threshold: 0,
+      },
+    );
+
+    sections.forEach((section) => observer.observe(section));
+    return () => observer.disconnect();
+  }, []);
+
+  const desktopLinkClass = (href) => {
+    const isActive = activeSection === href.replace("#", "");
+    return `relative pb-1 font-medium transition-colors text-sm ${
       isActive ? "text-[#ffed00]" : "text-white/80 hover:text-[#ffed00]"
     } after:absolute after:left-0 after:bottom-0 after:h-[1.5px] after:bg-[#ffed00] after:transition-all after:duration-300 ${
       isActive ? "after:w-full" : "after:w-0 hover:after:w-full"
     }`;
+  };
+
+  const mobileLinkClass = (href) => {
+    const isActive = activeSection === href.replace("#", "");
+    return `group inline-flex items-center gap-4 text-4xl md:text-5xl font-serif tracking-wide transition-all duration-300 ${
+      isActive ? "text-[#ffed00]" : "text-white hover:text-[#ffed00]"
+    }`;
+  };
 
   return (
     <header>
@@ -40,15 +73,15 @@ function Navbar() {
         }`}
       >
         <div>
-          <img src={header_img} alt="header_img" className="w-15" />
+          <img src={header_img} alt="header_img" className="w-60" />
         </div>
         <div className="hidden md:flex items-center gap-10">
           <ul className="flex gap-10 text-[#ffed00]">
             {navLinks.map((n) => (
               <li key={n.name}>
-                <NavLink className={desktopLink} to={n.href}>
+                <a className={desktopLinkClass(n.href)} href={n.href}>
                   {n.name}
-                </NavLink>
+                </a>
               </li>
             ))}
           </ul>
@@ -104,22 +137,16 @@ function Navbar() {
                     style={{ transitionDelay: `${index * 100}ms` }}
                     className={`transition-all duration-500 ${menuOpen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"}`}
                   >
-                    <NavLink
-                      to={n.href}
+                    <a
+                      href={n.href}
                       onClick={() => setMenuOpen(false)}
-                      className={({ isActive }) =>
-                        `group inline-flex items-center gap-4 text-4xl md:text-5xl font-serif tracking-wide transition-all duration-300 ${
-                          isActive
-                            ? "text-[#ffed00]"
-                            : "text-white hover:text-[#ffed00]"
-                        }`
-                      }
+                      className={mobileLinkClass(n.href)}
                     >
                       <span className="text-base text-[#ffed00]/50">
                         0{index + 1}
                       </span>
                       {n.name}
-                    </NavLink>
+                    </a>
                   </li>
                 ))}
               </ul>

@@ -17,12 +17,13 @@ function Hero() {
       <div className="max-w-2xl">
         <div>
           <p
-            className="text-white/80 text-3xl font-bold mb-6 mt-2"
+            className="text-white/80 text-center whitespace-wrap text-3xl md:text-5xl font-bold mb-6 mt-2"
             data-aos="fade-up"
             data-aos-once="true"
           >
-            Your data is encrypted, compliant,
-            <br /> all in one place.
+            Your data is encrypted,
+            <br />
+            compliant, all in one place.
           </p>
 
           <p

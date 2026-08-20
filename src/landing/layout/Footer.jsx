@@ -1,13 +1,12 @@
-import { NavLink } from "react-router-dom";
 import footer_img from "/img/vaultbase-primary-transparent.svg";
 
 function Footer() {
   const navLinks = [
-    { name: "Home", href: "/" },
-    { name: "Features", href: "/features" },
-    { name: "How It Works", href: "/how-it-works" },
-    { name: "Pricing", href: "/pricing" },
-    { name: "Contact", href: "/contact" },
+    { name: "Home", href: "#home" },
+    { name: "Features", href: "#features" },
+    { name: "How It Works", href: "#how-it-works" },
+    { name: "Pricing", href: "#pricing" },
+    { name: "Contact", href: "#contact" },
   ];
 
   return (
@@ -28,13 +27,13 @@ function Footer() {
             Navigate
           </p>
           {navLinks.map((n) => (
-            <NavLink
+            <a
               key={n.name}
-              to={n.href}
+              href={n.href}
               className="text-white/60 hover:text-[#ffed00] text-sm transition-colors w-fit"
             >
               {n.name}
-            </NavLink>
+            </a>
           ))}
         </div>
 

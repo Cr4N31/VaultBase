@@ -1,9 +1,12 @@
-import ComingSoon from "../shared/ComingSoon"
-function Pricing(){
-    return(
-        <>
-            <ComingSoon/>
-        </>
-    )
+import PricingHero from "../components/pricing/PrIcingHero";
+import PricingPlans from "../components/pricing/Pricingplans";
+
+function Pricing() {
+  return (
+    <>
+      <PricingHero />
+      <PricingPlans />
+    </>
+  );
 }
-export default Pricing
+export default Pricing;
