@@ -5,10 +5,10 @@ function HowItWorksHero() {
         <p className="uppercase tracking-[0.3em] text-xs text-[#ffed00] mb-6">
           How it works
         </p>
-        <h1 className="text-3xl md:text-5xl font-bold text-white leading-tight mb-6">
+        <h1 className="text-3xl md:text-5xl md:text-center text-left font-bold text-white leading-tight mb-6">
           One sign-up. A system built around how you actually work.
         </h1>
-        <p className="text-white/60 text-base md:text-lg leading-relaxed max-w-2xl mx-auto">
+        <p className="text-white/60 md:text-center text-left text-base md:text-lg leading-relaxed max-w-2xl mx-auto">
           Whether you're managing your own records or overseeing multiple
           organizations, VaultBase adapts to you from the first screen not the
           other way around.
