@@ -1,5 +1,5 @@
 import PricingHero from "../components/pricing/PrIcingHero";
-import PricingPlans from "../components/pricing/Pricingplans";
+import PricingPlans from "../components/pricing/PricingPlans";
 
 function Pricing() {
   return (
