@@ -211,7 +211,7 @@ function BranchDiagram() {
             <motion.path
               d={branchPath(branch.offX, branch.landX, branch.landY, ROOT.y)}
               fill="none"
-              stroke="#ffffff"
+              stroke="#030303"
               strokeOpacity="0.3"
               strokeWidth="1.5"
               strokeDasharray="4 4"
@@ -228,7 +228,7 @@ function BranchDiagram() {
               y1={branch.landY}
               x2={branch.endX}
               y2={branch.landY}
-              stroke="#ffffff"
+              stroke="#0f0f0f"
               strokeOpacity="0.25"
               strokeWidth="1.5"
               initial={{ pathLength: 0 }}
@@ -246,7 +246,7 @@ function BranchDiagram() {
               cy={ROOT.y}
               r="3.5"
               fill="#0A0A0A"
-              stroke="#ffffff"
+              stroke="#0c0c0c"
               strokeOpacity="0.5"
               initial={{ opacity: 0 }}
               animate={inView ? { opacity: 1 } : {}}
@@ -349,7 +349,7 @@ function BranchDiagram() {
 
       {/* HTML pill labels, positioned over the SVG by percentage */}
       <motion.div
-        className="absolute -translate-x-1/2 -translate-y-1/2 bg-white text-black text-[11px] font-mono font-medium px-3 py-1 rounded-full whitespace-nowrap"
+        className="absolute -translate-x-1/2 -translate-y-1/2 bg-black text-white/80 border border-white/20 text-[11px] font-mono font-medium px-3 py-1 rounded-full whitespace-nowrap"
         style={{
           left: `${(ROOT.x / 1000) * 100}%`,
           top: `${(ROOT.y / 440) * 100}%`,
@@ -364,7 +364,7 @@ function BranchDiagram() {
       {BRANCHES.map((branch, bi) => (
         <motion.div
           key={branch.name}
-          className="absolute -translate-x-1/2 -translate-y-1/2 bg-white/90 text-black text-[11px] font-mono font-medium px-3 py-1 rounded-full whitespace-nowrap"
+          className="absolute -translate-x-1/2 -translate-y-1/2  bg-black text-white/80 border border-white/20  text-[11px] font-mono font-medium px-3 py-1 rounded-full whitespace-nowrap"
           style={{
             left: `${(branch.landX / 1000) * 100}%`,
             top: `${(branch.landY / 440) * 100}%`,

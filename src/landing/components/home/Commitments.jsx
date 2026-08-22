@@ -60,7 +60,7 @@ function CommitmentCard({ id, title, children }) {
   return (
     <motion.div
       ref={ref}
-      className="bg-[#0A0A0A] border border-white/10 rounded-lg p-6 flex flex-col min-h-[240px]"
+      className="bg-black border border-white/10 rounded-lg p-6 flex flex-col min-h-[240px]"
       initial={{ opacity: 0, y: 16 }}
       animate={inView ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.5, ease: "easeOut" }}
