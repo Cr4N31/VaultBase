@@ -30,12 +30,7 @@ function StepsFlow() {
       <div className="max-w-6xl mx-auto">
         <div className="grid md:grid-cols-4 gap-8 md:gap-6">
           {steps.map((step, index) => (
-            <div
-              key={step.number}
-              data-aos="fade-up"
-              data-aos-delay={index * 100}
-              className="border-t border-white/10 pt-5"
-            >
+            <div key={step.number} className="border-t border-white/10 pt-5">
               <span className="text-[#ffed00] text-sm font-medium">
                 {step.number}
               </span>

@@ -270,13 +270,7 @@ function PhaseCard({ label, title, MapComponent, children }) {
 function Phases() {
   return (
     <section className="relative bg-black py-24 px-8">
-      <motion.h1
-        className="text-white text-4xl md:text-6xl font-bold text-center max-w-3xl mx-auto mb-16"
-        initial={{ opacity: 0, y: 24 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, amount: 0.5 }}
-        transition={{ duration: 0.7, ease: "easeOut" }}
-      >
+      <motion.h1 className="text-white text-4xl md:text-6xl font-bold text-center max-w-3xl mx-auto mb-16">
         Our Vision? Where This Goes
       </motion.h1>
 
@@ -323,13 +317,7 @@ function Phases() {
         </PhaseCard>
       </div>
 
-      <motion.div
-        className="max-w-2xl mx-auto text-center py-20 px-5 text-white"
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, amount: 0.4 }}
-        transition={{ duration: 0.7, ease: "easeOut" }}
-      >
+      <motion.div className="max-w-2xl mx-auto text-center py-20 px-5 text-white">
         <h2 className="text-white text-3xl md:text-4xl font-bold mb-8 tracking-tight leading-tight">
           The Metric That Matters Most
         </h2>

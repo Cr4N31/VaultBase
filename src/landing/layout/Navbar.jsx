@@ -68,12 +68,12 @@ function Navbar() {
   return (
     <header>
       <nav
-        className={`flex top-0 right-0 left-0 z-50 flex py-8 items-center justify-between px-8 transition-colors duration-300 ${
+        className={`flex fixed top-0 right-0 left-0 z-50 flex py-8 items-center justify-between px-8 transition-colors duration-300 ${
           scrolled ? "bg-black" : "bg-transparent"
         }`}
       >
         <div>
-          <img src={header_img} alt="header_img" className="w-60" />
+          <img src={header_img} alt="header_img" className="md:w-60 w-30" />
         </div>
         <div className="hidden md:flex items-center gap-10">
           <ul className="flex gap-10 text-[#ffed00]">

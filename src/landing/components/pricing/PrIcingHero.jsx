@@ -1,7 +1,7 @@
 function PricingHero() {
   return (
     <div className="bg-black pt-32 pb-12 px-8">
-      <div className="max-w-4xl mx-auto text-center" data-aos="fade-up">
+      <div className="max-w-4xl mx-auto text-center">
         <p className="uppercase tracking-[0.3em] text-xs text-[#ffed00] mb-6">
           Pricing
         </p>

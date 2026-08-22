@@ -154,7 +154,7 @@ function PricingPlans() {
     <div className="bg-black pb-24 px-8">
       <div className="max-w-6xl mx-auto">
         {/* Toggle */}
-        <div className="flex justify-center mb-16" data-aos="fade-up">
+        <div className="flex justify-center mb-16">
           <div className="inline-flex border border-white/10 rounded-full p-1 bg-white/5">
             <button
               onClick={() => setAccountType("individual")}
@@ -187,8 +187,8 @@ function PricingPlans() {
               : "md:grid-cols-3"
           }`}
         >
-          {plans.map((plan, index) => (
-            <div key={plan.name} data-aos="fade-up" data-aos-delay={index * 80}>
+          {plans.map((plan) => (
+            <div key={plan.name}>
               <PlanCard plan={plan} />
             </div>
           ))}

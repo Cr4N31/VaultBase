@@ -26,7 +26,7 @@ function Comparison() {
   return (
     <div className="bg-black py-24 px-8">
       <div className="max-w-5xl mx-auto">
-        <div className="max-w-2xl mb-16" data-aos="fade-up">
+        <div className="max-w-2xl mb-16">
           <p className="uppercase tracking-[0.3em] text-xs text-[#ffed00] mb-4">
             The difference
           </p>
@@ -40,10 +40,7 @@ function Comparison() {
         </div>
 
         {/* Column headers */}
-        <div
-          className="grid grid-cols-2 gap-4 md:gap-8 mb-4"
-          data-aos="fade-up"
-        >
+        <div className="grid grid-cols-2 gap-4 md:gap-8 mb-4">
           <span className="text-white/40 text-xs uppercase tracking-[0.2em]">
             The old way
           </span>
@@ -56,8 +53,6 @@ function Comparison() {
           {rows.map((row, index) => (
             <div
               key={index}
-              data-aos="fade-up"
-              data-aos-delay={index * 80}
               className="grid grid-cols-2 gap-4 md:gap-8 border-t border-white/10 pt-4"
             >
               <div className="flex gap-3">

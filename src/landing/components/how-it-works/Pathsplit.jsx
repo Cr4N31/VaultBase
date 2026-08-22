@@ -29,7 +29,7 @@ function PathSplit() {
   return (
     <div className="bg-black py-20 px-8">
       <div className="max-w-5xl mx-auto">
-        <div className="max-w-2xl mb-16" data-aos="fade-up">
+        <div className="max-w-2xl mb-16" data-aos="-up">
           <p className="uppercase tracking-[0.3em] text-xs text-[#ffed00] mb-4">
             The branch
           </p>
@@ -46,8 +46,6 @@ function PathSplit() {
           {paths.map((path, index) => (
             <div
               key={path.label}
-              data-aos="fade-up"
-              data-aos-delay={index * 100}
               className="border border-white/10 hover:border-[#ffed00]/30 transition-all duration-500 rounded-lg p-8"
             >
               <h3 className="text-white text-xl font-bold mb-2">

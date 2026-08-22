@@ -24,7 +24,7 @@ function ContactForm() {
     <div className="bg-black pb-24 px-8">
       <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-16">
         {/* Form */}
-        <div data-aos="fade-up">
+        <div>
           {submitted ? (
             <div className="border border-[#ffed00]/30 rounded-lg p-8">
               <h3 className="text-white text-lg font-semibold mb-2">
@@ -108,7 +108,7 @@ function ContactForm() {
         </div>
 
         {/* Direct contact info */}
-        <div data-aos="fade-up" data-aos-delay="100">
+        <div>
           <p className="uppercase tracking-[0.3em] text-xs text-[#ffed00] mb-6">
             Direct
           </p>

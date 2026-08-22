@@ -15,7 +15,7 @@ const branches = [
 
 function Hero() {
   return (
-    <section className="relative py-24 px-6 bg-black overflow-hidden">
+    <section className="relative mt-18 md:mt-40 py-24 px-6 bg-black overflow-hidden">
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row md:items-start justify-between gap-14 md:gap-10">
         {/* Text column */}
         <div className="flex flex-col text-center md:text-left max-w-xl mx-auto md:mx-0">
@@ -70,6 +70,7 @@ function Hero() {
             ))}
           </div>
         </div>
+        <div></div>
       </div>
     </section>
   );

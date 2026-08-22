@@ -5,33 +5,15 @@ function SectionHeading({ eyebrow, title, children }) {
   return (
     <div className="max-w-4xl mx-auto">
       {eyebrow && (
-        <motion.p
-          className="text-[#ffed00] text-xs uppercase tracking-[0.35em] mb-4"
-          initial={{ opacity: 0, y: 12 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: false, amount: 0.5 }}
-          transition={{ duration: 0.6, ease: "easeOut" }}
-        >
+        <motion.p className="text-[#ffed00] text-xs uppercase tracking-[0.35em] mb-4">
           {eyebrow}
         </motion.p>
       )}
-      <motion.h2
-        className="text-4xl md:text-6xl font-bold text-white tracking-tight leading-[1.05]"
-        initial={{ opacity: 0, y: 24 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: false, amount: 0.5 }}
-        transition={{ duration: 0.7, ease: "easeOut" }}
-      >
+      <motion.h2 className="text-4xl md:text-6xl font-bold text-white tracking-tight leading-[1.05]">
         {title}
       </motion.h2>
 
-      <motion.p
-        className="mt-6 text-white/60 text-sm md:text-base leading-relaxed max-w-2xl"
-        initial={{ opacity: 0, y: 16 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: false, amount: 0.5 }}
-        transition={{ duration: 0.7, ease: "easeOut", delay: 0.15 }}
-      >
+      <motion.p className="mt-6 text-white/60 text-sm md:text-base leading-relaxed max-w-2xl">
         {children}
       </motion.p>
     </div>
@@ -40,13 +22,7 @@ function SectionHeading({ eyebrow, title, children }) {
 
 function RevealCard({ eyebrow, title, children }) {
   return (
-    <motion.div
-      className="relative pl-16"
-      initial={{ opacity: 0, x: -32 }}
-      whileInView={{ opacity: 1, x: 0 }}
-      viewport={{ once: false, amount: 0.35 }}
-      transition={{ duration: 0.6, ease: "easeOut" }}
-    >
+    <motion.div className="relative pl-16">
       {/* dot marker on the line, lights up gold once in view */}
       <motion.span
         className="absolute left-0 top-2 w-2.5 h-2.5 rounded-full -translate-x-1/2 bg-white/15"
@@ -212,15 +188,16 @@ function HomeAbout() {
         </Timeline>
 
         <motion.p
-          className="text-white/50 text-sm md:text-base max-w-2xl mx-auto mt-20 leading-relaxed"
+          className="text-white/50 text-2xl md:text-4xl  max-w-2xl mx-auto mt-20 leading-relaxed"
           initial={{ opacity: 0, y: 12 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: false, amount: 0.5 }}
           transition={{ duration: 0.7, ease: "easeOut" }}
         >
-          These problems are ignored not because they are unknown, but because
-          the organizations experiencing them lack the technical capacity and
-          capital to solve them independently. VaultBase exists to change that.
+          <span className="text-white">These problems are ignored</span> not
+          because they are unknown, but because the organizations experiencing
+          them lack the technical capacity and capital to solve them
+          independently. VaultBase exists to change that.
         </motion.p>
       </div>
     </section>
