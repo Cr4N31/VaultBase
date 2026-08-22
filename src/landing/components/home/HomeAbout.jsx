@@ -194,10 +194,12 @@ function HomeAbout() {
           viewport={{ once: false, amount: 0.5 }}
           transition={{ duration: 0.7, ease: "easeOut" }}
         >
-          <span className="text-white">These problems are ignored</span> not
-          because they are unknown, but because the organizations experiencing
-          them lack the technical capacity and capital to solve them
-          independently. VaultBase exists to change that.
+          <span className="text-white font-semibold">
+            These problems are ignored
+          </span>{" "}
+          not because they are unknown, but because the organizations
+          experiencing them lack the technical capacity and capital to solve
+          them independently. VaultBase exists to change that.
         </motion.p>
       </div>
     </section>

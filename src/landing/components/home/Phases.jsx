@@ -133,7 +133,7 @@ function VaultTree({ inView }) {
   };
 
   return (
-    <svg viewBox="0 0 400 280" className="w-full h-auto">
+    <svg viewBox="0 0 400 280" className="w-full h-[215px]">
       {/* connecting lines — neutral, not gold */}
       {nodes.map((n, i) => {
         const start = lineStart(n);
@@ -229,7 +229,7 @@ function PhaseCard({ label, title, MapComponent, children }) {
   return (
     <div
       ref={ref}
-      className="bg-[#0A0A0A] border border-white/10 rounded-lg p-8 flex flex-col"
+      className="bg-black border border-white/10 hover:border-[#ffed00]/20 transition-all duration-250 rounded-lg p-8 flex flex-col"
     >
       <motion.p
         className="text-[#ffed00] text-xs uppercase tracking-[0.25em] mb-2"
