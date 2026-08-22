@@ -1,4 +1,3 @@
-import video from "/videos/erdvideo.mp4";
 const tables = [
   {
     name: "organizations",
@@ -70,16 +69,6 @@ function TableCard({ table }) {
 function ErdVisualizer() {
   return (
     <div className="relative bg-black py-24 px-8 overflow-hidden">
-      <video
-        className="absolute inset-0 w-full h-full object-cover"
-        autoPlay
-        muted
-        loop
-        playsInline
-      >
-        <source src={video} type="video/mp4" />
-      </video>
-
       {/* Dark overlay so text stays readable over the video */}
       <div className="absolute inset-0 bg-black/80" />
 

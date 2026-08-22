@@ -342,7 +342,7 @@ function Phases() {
           <div className="flex gap-2">
             <span className="text-white/30">—</span>
             <p className="text-white/60 text-sm md:text-base leading-relaxed">
-              <span className="text-white font-medium">
+              <span className="text-[#ffed00] font-medium">
                 How many organizations have stopped losing data
               </span>
               , and
@@ -352,7 +352,7 @@ function Phases() {
           <div className="flex gap-2">
             <span className="text-white/30">—</span>
             <p className="text-white/60 text-sm md:text-base leading-relaxed">
-              <span className="text-white font-medium">
+              <span className="text-[#ffed00] font-medium">
                 How many young people have found meaningful technical employment
               </span>
             </p>

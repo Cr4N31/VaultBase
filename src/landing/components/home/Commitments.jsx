@@ -65,7 +65,7 @@ function CommitmentCard({ id, title, children }) {
       animate={inView ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.5, ease: "easeOut" }}
     >
-      <code className="text-white/30 text-xs font-mono mb-4 block">
+      <code className="text-[#ffed00]/60 text-xs font-mono mb-4 block">
         // {String(id).padStart(2, "0")}
       </code>
 

@@ -115,7 +115,7 @@ function HomeAbout() {
           Infrastructure-as-a-Service (IaaS) company built on a single founding
           belief: that reliable, secure digital infrastructure should not be a
           privilege reserved for large corporations. We exist to bring that
-          infrastructure to the institutions that need it most — schools,
+          infrastructure to the institutions that need it most i.e schools,
           clinics, and small-to-medium enterprises across Nigeria and the
           broader West African region.
         </SectionHeading>
