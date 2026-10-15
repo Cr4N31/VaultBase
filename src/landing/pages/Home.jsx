@@ -1,7 +1,6 @@
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import Hero from "../components/home/Hero";
-import ImpactComparison from "../components/home/ImpactComparison";
 import HomeAbout from "../components/home/HomeAbout";
 import Phases from "../components/home/Phases";
 import Commitments from "../components/home/Commitments";
@@ -27,7 +26,7 @@ function Home() {
   const filter = useTransform(blur, (b) => `blur(${b}px)`);
 
   return (
-    <div className="relative">
+    <div className="bg-[#f5f2eb] relative flex flex-col md:mt-28 mt-8">
       {/* HERO + IMPACT COMPARISON — scrolls normally at full natural height,
           so every bit of content is reachable by scrolling. The shrink/
           blur/round-corner effect only kicks in during the final stretch,
@@ -35,14 +34,13 @@ function Home() {
       <motion.div
         ref={heroRef}
         style={{ scale, opacity, borderRadius, filter }}
-        className="relative overflow-hidden origin-top z-0"
+        className="relative min-h-[60vh] overflow-hidden origin-top z-0"
       >
         <Hero />
-        <ImpactComparison />
       </motion.div>
 
       {/* HOME ABOUT — overlaps the hero's space and rises to cover it */}
-      <div className="relative z-10 rounded-t-[40px] overflow-hidden bg-black">
+      <div className="relative z-10 mt-12 rounded-t-[40px] overflow-hidden">
         <HomeAbout />
         <Phases />
         <Commitments />

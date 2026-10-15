@@ -3,17 +3,17 @@ import { motion, useScroll, useTransform } from "framer-motion";
 
 function SectionHeading({ eyebrow, title, children }) {
   return (
-    <div className="max-w-4xl mx-auto">
+    <div className="w-full">
       {eyebrow && (
-        <motion.p className="text-[#ffed00] text-xs uppercase tracking-[0.35em] mb-4">
+        <motion.p className="text-[#5b6c57] text-[10px] sm:text-xs uppercase tracking-[0.25em] sm:tracking-[0.35em] mb-4">
           {eyebrow}
         </motion.p>
       )}
-      <motion.h2 className="text-4xl md:text-6xl font-bold text-white tracking-tight leading-[1.05]">
+      <motion.h2 className="text-3xl sm:text-4xl md:text-6xl font-bold text-black tracking-tight leading-[1.05]">
         {title}
       </motion.h2>
 
-      <motion.p className="mt-6 text-white/60 text-sm md:text-base leading-relaxed max-w-2xl">
+      <motion.p className="mt-6 text-black/60 text-sm md:text-base leading-relaxed max-w-2xl">
         {children}
       </motion.p>
     </div>
@@ -22,7 +22,7 @@ function SectionHeading({ eyebrow, title, children }) {
 
 function RevealCard({ eyebrow, title, children }) {
   return (
-    <motion.div className="relative pl-16">
+    <motion.div className="relative pl-8 sm:pl-12 md:pl-16">
       {/* dot marker on the line, lights up gold once in view */}
       <motion.span
         className="absolute left-0 top-2 w-2.5 h-2.5 rounded-full -translate-x-1/2 bg-white/15"
@@ -39,28 +39,22 @@ function RevealCard({ eyebrow, title, children }) {
       />
 
       {eyebrow && (
-        <p className="text-[#ffed00]/70 text-xs uppercase tracking-[0.3em] mb-3">
+        <p className="text-[#5b6c57]/70 text-xs uppercase tracking-[0.3em] mb-3">
           {eyebrow}
         </p>
       )}
       {title && (
-        <h3 className="text-white text-2xl md:text-3xl font-semibold mb-4 leading-snug">
+        <h3 className="text-black text-2xl md:text-3xl font-semibold mb-4 leading-snug">
           {title}
         </h3>
       )}
-      <div className="text-white/60 text-sm md:text-base leading-relaxed max-w-xl">
+      <div className="text-black/60 text-sm md:text-base leading-relaxed max-w-xl">
         {children}
       </div>
     </motion.div>
   );
 }
 
-/**
- * Wraps a group of RevealCards with its own scroll-linked glow line.
- * Each group tracks its own scroll progress independently, so the line
- * draws fresh as the user reaches that specific group — instead of every
- * group sharing one progress value tied to the whole page section.
- */
 function Timeline({ children }) {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
@@ -70,21 +64,21 @@ function Timeline({ children }) {
   const lineHeight = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
 
   return (
-    <div ref={ref} className="relative max-w-4xl mx-auto mt-24">
-      <div className="absolute left-4 top-0 bottom-0 w-px bg-white/10">
+    <div ref={ref} className="relative max-w-4xl mt-24">
+      <div className="absolute left-3 sm:left-4 top-0 bottom-0 w-px bg-white/10">
         <motion.div
-          className="w-full bg-[#ffed00] shadow-[0_0_8px_#ffed00]"
+          className="w-full bg-[#5b6c57]"
           style={{ height: lineHeight }}
         />
       </div>
-      <div className="space-y-24">{children}</div>
+      <div className="space-y-16 sm:space-y-20 md:space-y-24">{children}</div>
     </div>
   );
 }
 
 function HomeAbout() {
   return (
-    <section className="bg-black text-white py-32 px-8">
+    <section className="bg-[#f5f2eb] text-black py-16 sm:py-20 md:py-32 px-5 sm:px-8 md:px-12">
       <div>
         <SectionHeading title="Who We Are">
           VaultBase is a venture of CRAN3, a West African
@@ -115,7 +109,7 @@ function HomeAbout() {
           </RevealCard>
         </Timeline>
       </div>
-      <div className="mt-48">
+      <div className="mt-20 sm:mt-28 md:mt-48">
         {/* The problem we are solving */}
         <SectionHeading title="The Problem We Are Solving">
           Across Nigeria and West Africa, the majority of institutions that
@@ -128,19 +122,19 @@ function HomeAbout() {
           <RevealCard eyebrow="In Schools">
             <ul className="space-y-3">
               <li className="flex gap-3">
-                <span className="text-[#ffed00]">—</span> Student results go
+                <span className="text-[#5b6c57]">—</span> Student results go
                 missing, leaving students unable to prove their academic records
               </li>
               <li className="flex gap-3">
-                <span className="text-[#ffed00]">—</span> Grades are mismatched
+                <span className="text-[#5b6c57]">—</span> Grades are mismatched
                 between students due to manual data entry errors
               </li>
               <li className="flex gap-3">
-                <span className="text-[#ffed00]">—</span> Enrollment records are
+                <span className="text-[#5b6c57]">—</span> Enrollment records are
                 incomplete, making administrative decisions unreliable
               </li>
               <li className="flex gap-3">
-                <span className="text-[#ffed00]">—</span> There is no
+                <span className="text-[#5b6c57]">—</span> There is no
                 searchable, centralized student database, each term starts from
                 scratch
               </li>
@@ -150,19 +144,19 @@ function HomeAbout() {
           <RevealCard eyebrow="In Healthcare">
             <ul className="space-y-3">
               <li className="flex gap-3">
-                <span className="text-[#ffed00]">—</span> Patient records are
+                <span className="text-[#5b6c57]">—</span> Patient records are
                 paper-based and frequently lost or damaged
               </li>
               <li className="flex gap-3">
-                <span className="text-[#ffed00]">—</span> Mismatched records
+                <span className="text-[#5b6c57]">—</span> Mismatched records
                 lead to diagnostic and treatment errors
               </li>
               <li className="flex gap-3">
-                <span className="text-[#ffed00]">—</span> Hospitals have no
+                <span className="text-[#5b6c57]">—</span> Hospitals have no
                 reliable audit trail for patient history
               </li>
               <li className="flex gap-3">
-                <span className="text-[#ffed00]">—</span> Data sharing between
+                <span className="text-[#5b6c57]">—</span> Data sharing between
                 departments is slow, manual, and error-prone
               </li>
             </ul>
@@ -171,16 +165,16 @@ function HomeAbout() {
           <RevealCard eyebrow="In SMEs">
             <ul className="space-y-3">
               <li className="flex gap-3">
-                <span className="text-[#ffed00]">—</span> Business records,
+                <span className="text-[#5b6c57]">—</span> Business records,
                 invoices, and client data exist only in spreadsheets or physical
                 files
               </li>
               <li className="flex gap-3">
-                <span className="text-[#ffed00]">—</span> There is no backup or
+                <span className="text-[#5b6c57]">—</span> There is no backup or
                 recovery system when data is lost
               </li>
               <li className="flex gap-3">
-                <span className="text-[#ffed00]">—</span> Scaling is impossible
+                <span className="text-[#5b6c57]">—</span> Scaling is impossible
                 without a reliable data foundation
               </li>
             </ul>
@@ -188,13 +182,13 @@ function HomeAbout() {
         </Timeline>
 
         <motion.p
-          className="text-white/50 text-2xl md:text-4xl  max-w-2xl mx-auto mt-20 leading-relaxed"
+          className="text-black/50 text-xl sm:text-2xl md:text-4xl max-w-2xl mx-auto mt-16 sm:mt-20 leading-relaxed px-1 sm:px-0"
           initial={{ opacity: 0, y: 12 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: false, amount: 0.5 }}
           transition={{ duration: 0.7, ease: "easeOut" }}
         >
-          <span className="text-white font-semibold">
+          <span className="text-black font-semibold">
             These problems are ignored
           </span>{" "}
           not because they are unknown, but because the organizations

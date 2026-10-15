@@ -50,7 +50,7 @@ export default function NetworkVisual({ className = "" }) {
       aria-label="Animated network of encrypted data nodes"
       preserveAspectRatio="xMidYMid meet"
     >
-      <rect x="0" y="0" width="680" height="560" fill="#000000" />
+      <rect x="0" y="0" width="680" height="560" fill="#fcf3eb" />
 
       <motion.g
         animate={{ opacity: [0.3, 0.6, 0.3] }}
@@ -66,7 +66,7 @@ export default function NetworkVisual({ className = "" }) {
               y1={from.cy}
               x2={to.cx}
               y2={to.cy}
-              stroke="#ffed00"
+              stroke="#5b6c57 "
               strokeWidth="0.5"
             />
           );
@@ -79,8 +79,8 @@ export default function NetworkVisual({ className = "" }) {
           cx={n.cx}
           cy={n.cy}
           r={n.r}
-          fill={n.filled ? "#ffed00" : "#0A0A0A"}
-          stroke="#ffed00"
+          fill={n.filled ? "#5b6c57" : "#5b6c57"}
+          stroke="#5b6c57"
           strokeWidth={n.filled ? 0 : n.r > 5 ? 1.5 : 1}
           animate={{ x: [0, n.drift[0], 0], y: [0, n.drift[1], 0] }}
           transition={{ duration: n.dur, repeat: Infinity, ease: "easeInOut" }}

@@ -8,7 +8,7 @@ import Footer from "./Footer";
 
 function Layout() {
   return (
-    <div className="bg-black">
+    <div className="bg-[#f5f2eb]">
       <Navbar />
       <main>
         <section id="home" className="scroll-mt-20">

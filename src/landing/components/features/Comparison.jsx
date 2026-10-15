@@ -24,16 +24,16 @@ const rows = [
 
 function Comparison() {
   return (
-    <div className="bg-black py-24 px-8">
+    <div className="bg-[#f5f2eb] py-24 px-8">
       <div className="max-w-5xl mx-auto">
         <div className="max-w-2xl mb-16">
-          <p className="uppercase tracking-[0.3em] text-xs text-[#ffed00] mb-4">
+          <p className="uppercase tracking-[0.3em] text-xs text-[#5b6c57] mb-4">
             The difference
           </p>
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-black mb-4">
             The old way was never built for this.
           </h2>
-          <p className="text-white/60 text-base leading-relaxed">
+          <p className="text-black/60 text-base leading-relaxed">
             Most organizations aren't dealing with bad intentions, just tools
             that were never designed to hold sensitive records safely.
           </p>
@@ -41,10 +41,10 @@ function Comparison() {
 
         {/* Column headers */}
         <div className="grid grid-cols-2 gap-4 md:gap-8 mb-4">
-          <span className="text-white/40 text-xs uppercase tracking-[0.2em]">
+          <span className="text-black/40 text-xs uppercase tracking-[0.2em]">
             The old way
           </span>
-          <span className="text-[#ffed00] text-xs uppercase tracking-[0.2em]">
+          <span className="text-[#5b6c57] text-xs uppercase tracking-[0.2em]">
             The VaultBase way
           </span>
         </div>
@@ -56,14 +56,14 @@ function Comparison() {
               className="grid grid-cols-2 gap-4 md:gap-8 border-t border-white/10 pt-4"
             >
               <div className="flex gap-3">
-                <span className="text-white/30 shrink-0">✕</span>
-                <p className="text-white/50 text-sm leading-relaxed">
+                <span className="text-black/30 shrink-0">✕</span>
+                <p className="text-black/50 text-sm leading-relaxed">
                   {row.before}
                 </p>
               </div>
               <div className="flex gap-3">
-                <span className="text-[#ffed00] shrink-0">✓</span>
-                <p className="text-white text-sm leading-relaxed">
+                <span className="text-[#5b6c57] shrink-0">✓</span>
+                <p className="text-black text-sm leading-relaxed">
                   {row.after}
                 </p>
               </div>

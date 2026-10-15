@@ -1,16 +1,16 @@
 function FeaturesHero() {
   return (
-    <div className="bg-black pt-32 pb-20 px-8">
+    <div className="bg-[#f5f2eb] pt-32 pb-20 px-8">
       <div className="max-w-4xl mx-auto text-center">
-        <p className="uppercase tracking-[0.3em] text-xs text-[#ffed00] mb-6">
+        <p className="uppercase tracking-[0.3em] text-xs text-[#5b6c57] mb-6">
           Features
         </p>
-        <h1 className="text-3xl md:text-5xl md:text-center text-left font-bold text-white leading-tight mb-6">
+        <h1 className="text-3xl md:text-5xl md:text-center text-left font-bold text-black leading-tight mb-6">
           Whatever your organization is,
           <br />
           your records deserve better than a spreadsheet.
         </h1>
-        <p className="text-white/60 md:text-center text-left text-base md:text-lg leading-relaxed max-w-2xl mx-auto">
+        <p className="text-black/60 md:text-center text-left text-base md:text-lg leading-relaxed max-w-2xl mx-auto">
           Schools, clinics, and growing businesses all hold data they're
           responsible for student files, patient records, staff and customer
           information. VaultBase gives every one of them the same thing: an

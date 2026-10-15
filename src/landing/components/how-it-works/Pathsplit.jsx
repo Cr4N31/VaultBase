@@ -27,16 +27,16 @@ const paths = [
 
 function PathSplit() {
   return (
-    <div className="bg-black py-20 px-8">
+    <div className="bg-[#f5f2eb] py-20 px-8">
       <div className="max-w-5xl mx-auto">
         <div className="max-w-2xl mb-16" data-aos="-up">
-          <p className="uppercase tracking-[0.3em] text-xs text-[#ffed00] mb-4">
+          <p className="uppercase tracking-[0.3em] text-xs text-[#5b6c57] mb-4">
             The branch
           </p>
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-black mb-4">
             Two ways to use VaultBase. One choice decides which.
           </h2>
-          <p className="text-white/60 text-base leading-relaxed">
+          <p className="text-black/60 text-base leading-relaxed">
             You're not stuck configuring a generic dashboard. Pick your path and
             the interface, pricing, and tools that follow are built for it.
           </p>
@@ -46,39 +46,39 @@ function PathSplit() {
           {paths.map((path, index) => (
             <div
               key={path.label}
-              className="border border-white/10 hover:border-[#ffed00]/30 transition-all duration-500 rounded-lg p-8"
+              className="border border-white/10 hover:border-[#5b6c57]/30 transition-all duration-500 rounded-lg p-8"
             >
-              <h3 className="text-white text-xl font-bold mb-2">
+              <h3 className="text-black text-xl font-bold mb-2">
                 {path.label}
               </h3>
-              <p className="text-white/50 text-sm mb-6 leading-relaxed">
+              <p className="text-black/50 text-sm mb-6 leading-relaxed">
                 {path.tagline}
               </p>
 
-              <p className="uppercase tracking-[0.2em] text-[11px] text-[#ffed00]/70 mb-3">
+              <p className="uppercase tracking-[0.2em] text-[11px] text-[#5b6c57]/70 mb-3">
                 Side panel
               </p>
               <div className="flex flex-wrap gap-2 mb-6">
                 {path.sidebar.map((item) => (
                   <span
                     key={item}
-                    className="text-xs text-white/70 border border-white/10 rounded-full px-3 py-1"
+                    className="text-xs text-black/70 border border-white/10 rounded-full px-3 py-1"
                   >
                     {item}
                   </span>
                 ))}
               </div>
 
-              <p className="uppercase tracking-[0.2em] text-[11px] text-[#ffed00]/70 mb-3">
+              <p className="uppercase tracking-[0.2em] text-[11px] text-[#5b6c57]/70 mb-3">
                 What's inside
               </p>
               <ul className="space-y-2">
                 {path.highlights.map((highlight) => (
                   <li
                     key={highlight}
-                    className="flex gap-2 text-sm text-white/70 leading-relaxed"
+                    className="flex gap-2 text-sm text-black/70 leading-relaxed"
                   >
-                    <span className="text-[#ffed00] shrink-0">→</span>
+                    <span className="text-[#5b6c57] shrink-0">→</span>
                     {highlight}
                   </li>
                 ))}

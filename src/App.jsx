@@ -19,7 +19,7 @@ function App() {
   }, []);
 
   return (
-    <main className="bg-black min-h-screen">
+    <main className="bg-[#f5f2eb] text-black min-h-screen">
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Layout />} />

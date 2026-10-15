@@ -24,7 +24,7 @@ export default function RegisterPage() {
   };
 
   return (
-    <div className="min-h-screen w-full flex bg-black overflow-x-hidden">
+    <div className="min-h-screen w-full flex bg-[#f5f2eb] overflow-x-hidden">
       {/* Form panel */}
       <div className="w-full lg:w-[45%] flex flex-col justify-start px-8 sm:px-16 py-12 min-w-0 max-h-screen overflow-y-auto register-scrollbar">
         <motion.div
@@ -35,30 +35,30 @@ export default function RegisterPage() {
         >
           <div className="flex absolute top-5 left-5 items-center gap-2 mb-6">
             <Link to="/">
-              <ArrowLeftIcon className="text-white/40 hover:text-white/70 transition-colors cursor-pointer" />
+              <ArrowLeftIcon className="text-black/40 hover:text-black/70 transition-colors cursor-pointer" />
             </Link>
           </div>
 
-          <h1 className="font-['Space_Grotesk'] text-2xl font-medium text-white mb-2">
+          <h1 className="font-['Space_Grotesk'] text-2xl font-medium text-black mb-2">
             Create your account
           </h1>
-          <p className="font-['Sora'] text-sm text-white/50 mb-8">
+          <p className="font-['Sora'] text-sm text-black/50 mb-8">
             Secure, encrypted data infrastructure for your institution
           </p>
 
           <div className="flex flex-col gap-3">
             <div>
-              <button className="bg-white/10 font-['Space_Grotesk'] hover:bg-white/20 transition-colors duration-250 w-full flex gap-3 items-center justify-center py-4 px-8 border border-white/10 rounded-xl text-white">
+              <button className="bg-white/40 hover:bg-[#5b6c57] font-['Space_Grotesk'] transition-colors duration-250 w-full flex gap-3 items-center justify-center py-4 px-8 border border-white/10 rounded-xl text-black">
                 <FaGoogle className="inline-block" />
                 <p className="text-sm">Continue with Google</p>
               </button>
             </div>
             <div className="flex flex-col sm:flex-row gap-2">
-              <button className="bg-white/10 font-['Space_Grotesk'] hover:bg-white/20 transition-colors duration-250 w-full flex gap-3 items-center justify-center py-3 px-8 border border-white/10 rounded-xl text-white whitespace-nowrap">
+              <button className="bg-white/40 hover:bg-[#5b6c57]  font-['Space_Grotesk'] transition-colors duration-250 w-full flex gap-3 items-center justify-center py-3 px-8 border border-white/10 rounded-xl text-black whitespace-nowrap">
                 <FaFacebookF className="inline-block" />
                 <p className="text-sm">Facebook</p>
               </button>
-              <button className="w-full bg-white/10 font-['Space_Grotesk'] hover:bg-white/20 transition-colors duration-250 flex gap-3 items-center justify-center py-3 px-8 border border-white/10 rounded-xl text-white whitespace-nowrap">
+              <button className="w-full bg-white/40 hover:bg-[#5b6c57]  font-['Space_Grotesk'] transition-colors duration-250 flex gap-3 items-center justify-center py-3 px-8 border border-white/10 rounded-xl text-black whitespace-nowrap">
                 <FaMicrosoft className="inline-block" />
                 <p className="text-sm">Microsoft</p>
               </button>
@@ -67,7 +67,7 @@ export default function RegisterPage() {
 
           <div className="flex items-center gap-2 justify-center ">
             <div className="border-t w-50 border-white/20 my-6"></div>
-            <span className="block text-center text-white/40 text-base my-6">
+            <span className="block text-center text-black/40 text-base my-6">
               Or
             </span>
             <div className="border-t w-50 border-white/20 my-6"></div>
@@ -77,7 +77,7 @@ export default function RegisterPage() {
             <div>
               <label
                 htmlFor="fullName"
-                className="block font-['Sora'] text-sm text-white/80 mb-2"
+                className="block font-['Sora'] text-sm text-black/80 mb-2"
               >
                 Full name
               </label>
@@ -90,14 +90,14 @@ export default function RegisterPage() {
                 value={form.fullName}
                 onChange={handleChange}
                 placeholder="Jane Doe"
-                className="w-full bg-transparent border-b border-white/20 pb-2 font-['Sora'] text-sm text-white placeholder:text-white/30 focus:outline-none focus:border-[#ffed00] transition-colors"
+                className="w-full bg-transparent border-b border-white/20 pb-2 font-['Sora'] text-sm text-black placeholder:text-black/30 focus:outline-none focus:border-[#5b6c57] transition-colors"
               />
             </div>
 
             <div>
               <label
                 htmlFor="email"
-                className="block font-['Sora'] text-sm text-white/80 mb-2"
+                className="block font-['Sora'] text-sm text-black/80 mb-2"
               >
                 Email
               </label>
@@ -110,14 +110,14 @@ export default function RegisterPage() {
                 value={form.email}
                 onChange={handleChange}
                 placeholder="you@school.edu.ng"
-                className="w-full bg-transparent border-b border-white/20 pb-2 font-['Sora'] text-sm text-white placeholder:text-white/30 focus:outline-none focus:border-[#ffed00] transition-colors"
+                className="w-full bg-transparent border-b border-white/20 pb-2 font-['Sora'] text-sm text-black placeholder:text-black/30 focus:outline-none focus:border-[#5b6c57] transition-colors"
               />
             </div>
 
             <div>
               <label
                 htmlFor="password"
-                className="block font-['Sora'] text-sm text-white/80 mb-2"
+                className="block font-['Sora'] text-sm text-black/80 mb-2"
               >
                 Password
               </label>
@@ -132,31 +132,31 @@ export default function RegisterPage() {
                   value={form.password}
                   onChange={handleChange}
                   placeholder="Min. 8 characters"
-                  className="w-full bg-transparent border-b border-white/20 pb-2 pr-8 font-['Sora'] text-sm text-white placeholder:text-white/30 focus:outline-none focus:border-[#ffed00] transition-colors"
+                  className="w-full bg-transparent border-b border-white/20 pb-2 pr-8 font-['Sora'] text-sm text-black placeholder:text-black/30 focus:outline-none focus:border-[#5b6c57] transition-colors"
                 />
                 <button
                   type="button"
                   onClick={() => setShowPassword((v) => !v)}
                   aria-label={showPassword ? "Hide password" : "Show password"}
-                  className="absolute right-0 bottom-2 text-white/40 hover:text-white/70 transition-colors"
+                  className="absolute right-0 bottom-2 text-black/40 hover:text-black/70 transition-colors"
                 >
                   {showPassword ? <EyeOff size={16} /> : <Eye size={16} />}
                 </button>
               </div>
             </div>
 
-            <p className="font-['Sora'] text-xs text-white/40 leading-relaxed">
+            <p className="font-['Sora'] text-xs text-black/40 leading-relaxed">
               By creating an account, you agree to VaultBase's{" "}
               <Link
                 to="/terms"
-                className="text-white/60 hover:text-[#ffed00] transition-colors"
+                className="text-black/60 hover:text-[#5b6c57] transition-colors"
               >
                 Terms of Service
               </Link>{" "}
               and{" "}
               <Link
                 to="/privacy"
-                className="text-white/60 hover:text-[#ffed00] transition-colors"
+                className="text-black/60 hover:text-[#5b6c57] transition-colors"
               >
                 Privacy Policy
               </Link>
@@ -165,17 +165,17 @@ export default function RegisterPage() {
 
             <button
               type="submit"
-              className="w-full bg-[#ffed00] text-black font-['Sora'] text-sm font-medium py-3 rounded-md hover:bg-[#ffed00]/90 transition-colors"
+              className="w-full bg-[#5b6c57] text-[#f5f2eb] font-['Sora'] text-sm font-medium py-3 rounded-md hover:bg-[#5b6c57]/90 transition-colors"
             >
               Create account
             </button>
           </form>
 
-          <p className="font-['Sora'] text-sm text-white/40 mt-8 text-center">
+          <p className="font-['Sora'] text-sm text-black/40 mt-8 text-center">
             Already have an account?{" "}
             <Link
               to="/login"
-              className="text-white hover:text-[#ffed00] transition-colors"
+              className="text-black hover:text-[#5b6c57] transition-colors"
             >
               Sign in
             </Link>

@@ -99,24 +99,24 @@ function PlanCard({ plan }) {
     <div
       className={`rounded-lg p-8 border ${
         plan.featured
-          ? "border-[#ffed00]/50 bg-[#ffed00]/[0.03]"
+          ? "border-[#5b6c57]/50 bg-[#5b6c57]/[0.06]"
           : "border-white/10"
       }`}
     >
       {plan.featured && (
-        <span className="text-[10px] uppercase tracking-[0.2em] text-[#ffed00] font-medium">
+        <span className="text-[10px] uppercase tracking-[0.2em] text-[#5b6c57] font-medium">
           Most popular
         </span>
       )}
-      <h3 className="text-white text-xl font-bold mt-2 mb-1">{plan.name}</h3>
-      <p className="text-white/50 text-sm mb-6 leading-relaxed">
+      <h3 className="text-black text-xl font-bold mt-2 mb-1">{plan.name}</h3>
+      <p className="text-black/50 text-sm mb-6 leading-relaxed">
         {plan.description}
       </p>
 
       <div className="flex items-baseline gap-1 mb-6">
-        <span className="text-white text-3xl font-bold">{plan.price}</span>
+        <span className="text-black text-3xl font-bold">{plan.price}</span>
         {plan.period && (
-          <span className="text-white/40 text-sm">{plan.period}</span>
+          <span className="text-black/40 text-sm">{plan.period}</span>
         )}
       </div>
 
@@ -124,9 +124,9 @@ function PlanCard({ plan }) {
         {plan.features.map((feature) => (
           <li
             key={feature}
-            className="flex gap-2 text-sm text-white/70 leading-relaxed"
+            className="flex gap-2 text-sm text-black/70 leading-relaxed"
           >
-            <span className="text-[#ffed00] shrink-0">→</span>
+            <span className="text-[#5b6c57] shrink-0">→</span>
             {feature}
           </li>
         ))}
@@ -135,8 +135,8 @@ function PlanCard({ plan }) {
       <button
         className={`w-full py-3 rounded-md text-sm font-semibold transition ${
           plan.featured
-            ? "bg-[#ffed00] text-black hover:opacity-90"
-            : "border border-white/20 text-white hover:border-[#ffed00]/50"
+            ? "bg-[#5b6c57] text-[#f5f2eb] hover:opacity-90"
+            : "border border-white/20 text-black hover:border-[#5b6c57]/50"
         }`}
       >
         Get started
@@ -151,7 +151,7 @@ function PricingPlans() {
     accountType === "individual" ? individualPlans : enterprisePlans;
 
   return (
-    <div className="bg-black pb-24 px-8">
+    <div className="bg-[#f5f2eb] pb-24 px-8">
       <div className="max-w-6xl mx-auto">
         {/* Toggle */}
         <div className="flex justify-center mb-16">
@@ -160,8 +160,8 @@ function PricingPlans() {
               onClick={() => setAccountType("individual")}
               className={`px-6 py-2 rounded-full text-sm font-medium transition ${
                 accountType === "individual"
-                  ? "bg-[#ffed00] text-black"
-                  : "text-white/60 hover:text-white"
+                  ? "bg-[#5b6c57] text-[#f5f2eb]"
+                  : "text-black/60 hover:text-black"
               }`}
             >
               Individual
@@ -170,8 +170,8 @@ function PricingPlans() {
               onClick={() => setAccountType("enterprise")}
               className={`px-6 py-2 rounded-full text-sm font-medium transition ${
                 accountType === "enterprise"
-                  ? "bg-[#ffed00] text-black"
-                  : "text-white/60 hover:text-white"
+                  ? "bg-[#5b6c57] text-[#f5f2eb]"
+                  : "text-black/60 hover:text-black"
               }`}
             >
               Enterprise
