@@ -34,7 +34,7 @@ function Home() {
       <motion.div
         ref={heroRef}
         style={{ scale, opacity, borderRadius, filter }}
-        className="relative min-h-[60vh] overflow-hidden origin-top z-0"
+        className="relative min-h-screen overflow-hidden origin-top z-0"
       >
         <Hero />
       </motion.div>
